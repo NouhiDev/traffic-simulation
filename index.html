@@ -3,13 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | traffic-simulator</title>
+    <title>nouhidev | traffic simulaionr</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <header>
+      <div class="logo-nav">
+        <img src="assets/logo.png" alt="" />
+      </div>
+      <input type="checkbox" id="nav_check" hidden />
+      <nav>
+        <div class="logo">
+          <img src="assets/logo.png" alt="" />
+        </div>
+        <ul>
+          <li>
+            <a href="https://nouhi.dev/" class="active">Home</a>
+          </li>
+          <li>
+            <a href="https://nouhi.dev/games/">Games</a>
+          </li>
+          <li>
+            <a href="https://nouhi.dev/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="https://nouhi.dev/other-projects/">Other</a>
+          </li>
+          <li>
+            <a href="https://nouhi.dev/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <label for="nav_check" class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </header>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1280 height=720></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -18,9 +51,8 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">traffic-simulator</div>
+        <div id="unity-build-title">VIEW THE PROJECT ON <a href="https://github.com/NouhiDev/traffic-simulator">https://github.com/NouhiDev/traffic-simulator</a></div>
       </div>
     </div>
     <script>
@@ -82,8 +114,8 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1280px";
+        canvas.style.height = "720px";
       }
       loadingBar.style.display = "block";
 
